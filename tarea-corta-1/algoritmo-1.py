@@ -4,37 +4,48 @@ import time
 # =========================
 # Algoritmo 1
 # =========================
-def algoritmo1(n):
+def algoritmo1(n): 
 
-    contador = 0
-    suma = 0
+    contador = 0            # O(1) dura 1
+    suma = 0                # O(1) dura 1
 
-    # Operaciones constantes
-    a = 5
-    b = 7
-    c = a * b
+    # Operaciones constantes    
+    a = 5                       # O(1) esto dura 1
+    b = 7                       # O(1) esto dura 1
+    c = a * b                   # O(1) esto dura 1
 
-    for i in range(n):
+                 #aca tenemos 5 en total 
 
-        for j in range(n):
+    for i in range(n):          # se repite n veces
 
-            contador += 1
+        for j in range(n):      # se repite n veces 
 
-            suma += i + j
 
-            x = i * j
-            y = x + 100
-            z = y / 3
+            contador += 1       # O(1) esto dura 1
 
-            if x % 2 == 0:
-                suma += 1
+            suma += i + j       # O(1) esto dura 1
+
+            x = i * j           # O(1) esto dura 1
+            y = x + 100         # O(1) esto dura 1
+            z = y / 3           # O(1) esto dura 1
+
+            if x % 2 == 0:      # O(1) esto dura 1
+                suma += 1       # O(1) esto dura 1
             else:
-                suma -= 1
+                suma -= 1       # O(1) esto dura 1
 
-    promedio = suma / (n * n)
+    promedio = suma / (n * n)    # esto dura 1
 
-    return contador + promedio
+    return contador + promedio    # O(1) esto dura 1  
 
+                            #aca tenemos 2 en total
+#MI analisis para big O:
+#1+1+1+1+1+1+1+1 = 8
+#se repite n veces:  8 * n * n = 8n²
+#Tenia al inicia 5
+#Tenia al final 2
+#En total : 8n² + 7
+#Resultado : O(n²)
 
 
 # =========================

@@ -6,32 +6,35 @@ import time
 # =========================
 def algoritmo2(n):
 
-    total = 0
-    suma_pares = 0
-    suma_impares = 0
+    total = 0                    # esto dura 1
+    suma_pares = 0                # esto dura 1
+    suma_impares = 0                # esto dura 1
 
     # Operaciones constantes
-    a = 10
-    b = 20
-    c = a + b
+    a = 10                    # esto dura 1
+    b = 20                    # esto dura 1
+    c = a + b                # esto dura 1
+            # en total 6
+    for i in range(n):        # esto dura n
 
-    for i in range(n):
+        total += i            # esto dura 1
 
-        total += i
-
-        if i % 2 == 0:
-            suma_pares += i
+        if i % 2 == 0:          # esto dura 1
+            suma_pares += i        # esto dura 1
         else:
-            suma_impares += i
+            suma_impares += i    # esto dura 1
 
-        x = i * 2
-        y = x + 5
-        z = y / 2
+        x = i * 2                # esto dura 1
+        y = x + 5            # esto dura 1
+        z = y / 2            # esto dura 1
+            # En total 7
+    
+    promedio = total / n   # esto dura 1
 
-    promedio = total / n
+    return promedio + suma_pares + suma_impares   # esto dura 1
+                            # En total 2
 
-    return promedio + suma_pares + suma_impares
-
+# Mi resultado final :7n + 8 O(n)
 
 # =========================
 # Medición de tiempo
